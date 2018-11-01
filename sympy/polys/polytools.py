@@ -4451,7 +4451,7 @@ def degree(f, gen=0):
     else:
         isNum = f.is_Number
         if not isNum:
-            p, _ = poly_from_expr(f)
+            p, _ = poly_from_expr(f, expand=False)
 
     if isNum:
         return S.Zero if f else S.NegativeInfinity
